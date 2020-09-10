@@ -28,7 +28,7 @@ namespace InternshipProject
         }
         public void Read()//Output the everything in the excel file
         {
-            WorkBook workbook = WorkBook.Load(@"C:\Users\Lam Nguyen\Desktop\FileIo\Book1.xlsx");
+            WorkBook workbook = WorkBook.Load(@"..\..\data\Book1.xlsx");
             WorkSheet sheet = workbook.GetWorkSheet("Sheet1");
             for (var i = 2; i < count; i++)
             {
@@ -40,7 +40,7 @@ namespace InternshipProject
         }
         public void Read(int times, int order)//Output a range of item in the excel file
         {
-            WorkBook workbook = WorkBook.Load(@"C:\Users\Lam Nguyen\Desktop\FileIo\Book1.xlsx");
+            WorkBook workbook = WorkBook.Load(@"..\..\data\Book1.xlsx");
             WorkSheet sheet = workbook.GetWorkSheet("Sheet1");
             int i;
             if (count >= order)//Checking if the current seected row is out of range 

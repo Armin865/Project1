@@ -9,6 +9,7 @@ using System.Dynamic;
 using System.Linq;
 using System.Text;
 using System.Threading;
+using System.IO;
 using System.Threading.Tasks;
 using IronXL;
 
@@ -22,7 +23,7 @@ namespace InternshipProject
         public DataIn()
         {
             count = 1;
-            WorkBook workbook = WorkBook.Load(@"C:\Users\Lam Nguyen\Desktop\FileIo\Book1.xlsx");
+            WorkBook workbook = WorkBook.Load(@"..\..\data\Book1.xlsx");
             WorkSheet sheet = workbook.GetWorkSheet("Sheet1");
             sheet["A1"].Value = "First name";
             sheet["B1"].Value = "Last name";
@@ -35,11 +36,19 @@ namespace InternshipProject
             
             //Add a blank WorkSheet
             WorkSheet xlsSheet = xlsWorkbook.CreateWorkSheet("Sheet1");
-            
-            
-            //Save the excel file
-            xlsWorkbook.SaveAs(@"C:\Users\Lam Nguyen\Desktop\FileIo\NEWS.xlsx");
+
+            if (!File.Exists(@"..\..\data\Book1.xlsx"))
+               {
+                //Save the excel file
+                xlsWorkbook.SaveAs(@"..\..\data\Book1.xlsx");
+            }
+            else
+            {
+                Console.WriteLine("The File exists already");
+            }
+
         }
+      
         public void WriteData()//Insert data to excel file with a signle name
         {   
             string fname, lname;
@@ -48,7 +57,7 @@ namespace InternshipProject
             Console.WriteLine("What is your last name?");
             lname = Console.ReadLine();
             //Ask for First Name and Last Name
-            WorkBook workbook = WorkBook.Load(@"C:\Users\Lam Nguyen\Desktop\FileIo\Book1.xlsx");//Open the file 
+            WorkBook workbook = WorkBook.Load(@"..\..\data\Book1.xlsx");//Open the file 
             WorkSheet sheet = workbook.GetWorkSheet("Sheet1");//Open the sheet
             //Initalize first row with First name and Last name labels
             sheet["A1"].Value = "First name";
@@ -62,13 +71,13 @@ namespace InternshipProject
             sheet["A" + count].Value = fname;
             sheet["B" + count].Value = lname;
             count++;//Keep track of the available row
-            workbook.SaveAs(@"C:\Users\Lam Nguyen\Desktop\FileIo\Book1.xlsx");
+            workbook.SaveAs(@"..\..\data\Book1.xlsx");
         }
         public void WriteData(string fname, string lname)//Helper function to add name with arguments 
         {
 
                 //Open the Excel file
-            WorkBook workbook = WorkBook.Load(@"C:\Users\Lam Nguyen\Desktop\FileIo\Book1.xlsx");
+            WorkBook workbook = WorkBook.Load(@"..\..\data\Book1.xlsx");
             //Open the Sheet in Excel file
             WorkSheet sheet = workbook.GetWorkSheet("Sheet1");
             //Initialize the first row with Values first name and last name
@@ -84,12 +93,12 @@ namespace InternshipProject
             sheet["B" + count].Value = lname;
             count++;//Increase to keep track of availabe row
             //Save the changes
-            workbook.SaveAs(@"C:\Users\Lam Nguyen\Desktop\FileIo\Book1.xlsx");
+            workbook.SaveAs(@"..\..\data\Book1.xlsx");
         }
         //Write Data to Excel file with multiple times 
         public void WriteData(int times)
         {   //Open the file and the sheet
-            WorkBook workbook = WorkBook.Load(@"C:\Users\Lam Nguyen\Desktop\FileIo\Book1.xlsx");
+            WorkBook workbook = WorkBook.Load(@"..\..\data\Book1.xlsx");
             WorkSheet sheet = workbook.GetWorkSheet("Sheet1");
             //Initalize the first row
             sheet["A1"].Value = "First name";
@@ -114,11 +123,11 @@ namespace InternshipProject
                 count++;
             }
             //Save the changes
-            workbook.SaveAs(@"C:\Users\Lam Nguyen\Desktop\FileIo\Book1.xlsx");
+            workbook.SaveAs(@"..\..\data\Book1.xlsx");
         }
         public int getCount()//Function counts how many rows are filled
         {
-            WorkBook workbook = WorkBook.Load(@"C:\Users\Lam Nguyen\Desktop\FileIo\Book1.xlsx");
+            WorkBook workbook = WorkBook.Load(@"..\..\data\Book1.xlsx");
             WorkSheet sheet = workbook.GetWorkSheet("Sheet1");
             while ((sheet["A" + count].Value) != "" && (sheet["B" + count].Value) != "")
             {
