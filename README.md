@@ -1,10 +1,10 @@
-###Author:
- ##Lam Nguyen 
- ###The first co-op rotation 
- ####Objective:
+### Author:
+ ## Lam Nguyen
+ ### The first co-op rotation 
+ #### Objective:
  	  Practice object oriented programming with C#
   	 Practice writing document follow guildline.
- ####Product:
+ #### Product:
   	 Two object : DataIn, DataOut
 #### Functions:
 	      DataIn: int count, DataIn(), Create(),  WriteData(), WriteData(string, string), WriteData(int),  getCount(), Randomstring(int), insertRandomString(int, int).
@@ -25,5 +25,10 @@
 - setCount(int) is use to set the cursor to the specific row which take 1 argument to set the cursor.
 - Read()  prints out the whole list in the excel.
 - Read(int, int) prints out the list with specific range. It take 2 arguments. The first argument is for the range and the second argument is for the root position.
+----------------
+   Challenge
+    - Follow strictly Object Oriented Program
+    - Config the right Console App to run the references.
+    - Find the right directory to open and save the excel file.
 # New American Business Association
 

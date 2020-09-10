@@ -58,7 +58,8 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
-    <None Include="Book2.xlsx" />
+    <None Include="App-Data\Book1.xlsx" />
+    <None Include="App-Data\Book2.xlsx" />
     <None Include="packages.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
