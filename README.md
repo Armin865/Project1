@@ -1,11 +1,13 @@
-###Author:
- ##Lam Nguyen 
- ###The first co-op rotation 
- ####Objective:
+### Author:
+---------------
+###  Lam Nguyen 
+###  The first co-op rotation 
+####  Objective:
  	  Practice object oriented programming with C#
   	 Practice writing document follow guildline.
- ####Product:
-  	 Two object : DataIn, DataOut
+ #### Product:
+  	 Two object : DataIn, DataOut.
+----------------
 #### Functions:
 	      DataIn: int count, DataIn(), Create(),  WriteData(), WriteData(string, string), WriteData(int),  getCount(), Randomstring(int), insertRandomString(int, int).
 	      DataOut:  int count, DataOut(int), setCount(int), Read(), Read(int, int).
