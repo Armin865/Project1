@@ -27,7 +27,7 @@ namespace ConsoleApp2
         {
             SQLServer ServerCompact = new SQLServer();
             ServerCompact.InsertDataBase();
-          
+            ServerCompact.ReadDataBase();
             Console.ReadLine();
         }
 
