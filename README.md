@@ -33,6 +33,13 @@
 - InsertDataBase(): Insert the first name and last name into the data base.
 - ReadDataBase(): Retreiving the first name and last name from Database.
 ----------
+	SQL Server Compact limitation:
+- There are limited functionalities compares to SQL Server.
+- Only store up to 4GB.
+-----------
+	SQL Server Compact advantages:
+- SQL Server Compact toolbox can be installed and intergrate within VS ide.
+-----------
 	Challenge
    - Follow strictly Object Oriented Program
    - Config the right Console App to run the references.
