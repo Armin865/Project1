@@ -11,6 +11,7 @@
 #### Functions:
 	      DataIn: int count, DataIn(), Create(),  WriteData(), WriteData(string, string), WriteData(int),  getCount(), Randomstring(int), insertRandomString(int, int).
 	      DataOut:  int count, DataOut(int), setCount(int), Read(), Read(int, int).
+		  SQLServer: string con,InsertDataBase(),ReadDataBase().
 ----------------------
 	DataIn Object: 
  - int count: keep track of the current row in excel
