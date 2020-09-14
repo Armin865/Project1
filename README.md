@@ -6,7 +6,7 @@
  	  Practice object oriented programming with C#
   	 Practice writing document follow guildline.
  #### Product:
-  	 Two object : DataIn, DataOut,SQLServer
+  	 Three objects : DataIn, DataOut,SQLServer
 ----------------
 #### Functions:
 	      DataIn: int count, DataIn(), Create(),  WriteData(), WriteData(string, string), WriteData(int),  getCount(), Randomstring(int), insertRandomString(int, int).
