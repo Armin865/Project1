@@ -16,22 +16,18 @@ using System.Threading;
 using System.Threading.Tasks;
 using System.IO;
 using IronXL;
+using System.Data.SqlClient;
 
-namespace InternshipProject
+namespace ConsoleApp2
 {
     class FirstInternshipProject
     {
 
         static void Main(string[] args)
         {
-           
-            DataIn DataIn1 = new DataIn();
-            DataOut Outexcel = new DataOut(2);
-            DataIn1.Create();
-            DataIn1.WriteData();
-            Outexcel.setCount(DataIn1.getCount());
-            Console.WriteLine(Outexcel.count);
-            Outexcel.Read(2, 2);
+            SQLServer ServerCompact = new SQLServer();
+            ServerCompact.InsertDataBase();
+          
             Console.ReadLine();
         }
 
