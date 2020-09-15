@@ -125,16 +125,7 @@ namespace ConsoleApp2
             //Save the changes
             workbook.SaveAs(@"..\..\App-data\Book1.xlsx");
         }
-        public int getCount()//Function counts how many rows are filled
-        {
-            WorkBook workbook = WorkBook.Load(@"..\..\App-data\Book1.xlsx");
-            WorkSheet sheet = workbook.GetWorkSheet("Sheet1");
-            while ((sheet["A" + count].Value) != "" && (sheet["B" + count].Value) != "")
-            {
-                count++;
-            }
-            return count;
-        }
+      
         public string Randomstring(int charLength)//Create a random string, this is a helper function
         {
             var chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";

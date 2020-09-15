@@ -26,7 +26,7 @@ namespace ConsoleApp2
         static void Main(string[] args)
         {
             DTO_Controller person = new DTO_Controller();
-            person.printData();
+            person.ExcelDataToDataBase();
         }
     }
 

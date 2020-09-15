@@ -13,7 +13,7 @@ namespace ConsoleApp2
 { 
     class SQLServer
     {   //Establish Connection with the Data Base
-        public SqlCeConnection con = new SqlCeConnection(@"Data Source=..\..\App-Data\Person.sdf");
+        private SqlCeConnection con = new SqlCeConnection(@"Data Source=..\..\App-Data\Person.sdf");
         public string getFirstName()//Get the first name
         {
             Console.WriteLine("What is your first name?");
@@ -26,7 +26,20 @@ namespace ConsoleApp2
             string lname = Console.ReadLine();
             return lname;
         }
-       
+        public void InsertDataBase(string firstname, string lastname)
+        {
+           
+            //Open the Data Base
+            con.Open();
+            //Create new Query command
+            SqlCeCommand cmd = con.CreateCommand();
+            cmd.CommandText = "INSERT INTO [NABA] ([firstname],[lastname]) VALUES (N'" + firstname + "',N'" + lastname + "')";
+            //Execute the Insert Query
+            cmd.ExecuteNonQuery();
+            //After finish the excution, close the connection
+            con.Close();
+           
+        }
         public void InsertDataBase()
         {
             string fname = getFirstName();//save fisrt name 

@@ -9,8 +9,8 @@ namespace ConsoleApp2
 {
     class DTO_Controller
     {
-        SQLServer ServerCompact = new SQLServer();
-        Person[] person;
+        private SQLServer ServerCompact = new SQLServer();
+        private Person[] person;
         int count;
        public DTO_Controller()
         {   //copy the length of the database
@@ -27,6 +27,20 @@ namespace ConsoleApp2
             {
                 Console.WriteLine("Info: "+ person[i]);
             }
+            Console.ReadLine();
+        }
+        public void ExcelDataToDataBase()
+        { DataOut Data = new DataOut();
+            
+            
+            Person[] excel = new Person[Data.count];
+            excel = Data.ReadAndReturnArray();
+            SQLServer DataBase = new SQLServer();
+            for(var i = 0; i < Data.count; i++)
+            {
+                DataBase.InsertDataBase(excel[i].Firstname.ToString(), excel[i].Lastname.ToString());
+            }
+            Console.WriteLine("Inserted Into Database");
             Console.ReadLine();
         }
     }

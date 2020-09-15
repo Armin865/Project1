@@ -18,25 +18,64 @@ namespace ConsoleApp2
     class DataOut
     {
         public int count;
-        public DataOut(int count)//Constructor
+        
+        public DataOut()//Constructor
         {
-            this.count = count;
+            this.count = getCount();
         }
         public void setCount(int count)//set count to keep track of row
         {
             this.count = count;
         }
         public void Read()//Output the everything in the excel file
+        {   
+            WorkBook workbook = WorkBook.Load(@"..\..\App-data\Book1.xlsx");
+            WorkSheet sheet = workbook.GetWorkSheet("Sheet1");
+            
+
+           for(var i =2;i< count; i++)
+            {
+                
+                Console.WriteLine("First name: {0} , Last name: {1}", sheet["A" + i].Value, sheet["B" + i].Value);
+            }
+
+           
+            // Console.ReadLine();
+            //Reset current row back to the top
+          this.count = 0;
+        }
+        public int getCount()//Function counts how many rows are filled
+        {
+            int i = 2;
+            int count = 0;
+            WorkBook workbook = WorkBook.Load(@"..\..\App-data\Book1.xlsx");
+            WorkSheet sheet = workbook.GetWorkSheet("Sheet1");
+            while ((sheet["A" + i].Value).ToString() != "" && (sheet["B" + i].Value).ToString() != "")
+            {
+                
+                count++;
+                i++;
+            }
+            return count;
+        }
+        public Person[] ReadAndReturnArray()
         {
             WorkBook workbook = WorkBook.Load(@"..\..\App-data\Book1.xlsx");
             WorkSheet sheet = workbook.GetWorkSheet("Sheet1");
-            for (var i = 2; i < count; i++)
+            int counts = getCount();
+           
+            Person[] person = new Person[counts];
+            int index=2;
+            for (var i =0; i < counts; i++)
             {
-                Console.WriteLine("First name: {0} , Last name: {1}", sheet["A" + i].Value, sheet["B" + i].Value);
+                
+                person[i] = new Person(sheet["A" + index].Value.ToString(), sheet["B" + index].Value.ToString());
+                index++;
+                Console.WriteLine(person[i]);
+                
             }
-            // Console.ReadLine();
-            //Reset current row back to the top
-            this.count = 0;
+            Console.ReadLine();
+            return person;
         }
         public void Read(int times, int order)//Output a range of item in the excel file
         {
