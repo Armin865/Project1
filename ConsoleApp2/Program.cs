@@ -25,13 +25,9 @@ namespace ConsoleApp2
 
         static void Main(string[] args)
         {
-            SQLServer ServerCompact = new SQLServer();
-            ServerCompact.InsertDataBase();
-            ServerCompact.ReadDataBase();
-            Console.ReadLine();
+            DTO_Person person = new DTO_Person();
+            person.printData();
         }
-
-      
     }
 
 }
