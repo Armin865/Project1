@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using System.Data.SqlServerCe;
 using System.IO;
 using System.Security.Cryptography;
+using System.Collections;
 
 namespace ConsoleApp2
 
@@ -43,23 +44,48 @@ namespace ConsoleApp2
             Console.WriteLine("Press Enter");
             Console.ReadLine();
         }
-        public void ReadDataBase()
+        public int getLength()
+        {   //Open the connection
+            con.Open();
+            //Create new Query command
+            SqlCeCommand cmd = con.CreateCommand();
+            cmd.CommandText = "SELECT COUNT(*) FROM NABA";
+            //Execute Query command
+            SqlCeDataReader reader = cmd.ExecuteReader();
+            //create an instant to copy the database length
+            int count = 0;
+            count = (int)cmd.ExecuteScalar();
+            //Close the connection
+            con.Close();
+            return count;
+
+        }
+        public Person[] ReadDataBase()
         {   //Open the Data base
+            Person[] person = new Person[getLength()];
+            var count = 0;
             con.Open();
             //Create new Query command
             SqlCeCommand cmd = con.CreateCommand();
             cmd.CommandText = "SELECT firstname, lastname FROM NABA";
             //Create a reader object to retreive the information from the data base
             SqlCeDataReader reader = cmd.ExecuteReader();
+            //Execute reader
+            reader = cmd.ExecuteReader();
+
             //while the reader object read the database
             while (reader.Read())
             {
-                Console.WriteLine("First Name :"+reader["firstname"].ToString()+", Last Name: "+reader["lastname"].ToString());
+               
+               person[count] = new Person(reader["firstname"].ToString(), reader["lastname"].ToString());
+                count++;
             }
             //close the connection
             reader.Close();
             Console.WriteLine("Press Enter");
             Console.ReadLine();
+           
+            return person;
         }
     }
 }
