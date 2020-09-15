@@ -76,8 +76,8 @@ namespace ConsoleApp2
             //while the reader object read the database
             while (reader.Read())
             {
-               
-               person[count] = new Person(reader["firstname"].ToString(), reader["lastname"].ToString());
+
+                person[count] = new Person(reader["firstname"].ToString(), reader["lastname"].ToString());
                 count++;
             }
             //close the connection
