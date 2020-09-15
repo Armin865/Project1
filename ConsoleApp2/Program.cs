@@ -25,7 +25,7 @@ namespace ConsoleApp2
 
         static void Main(string[] args)
         {
-            DTO_Person person = new DTO_Person();
+            DTO_Controller person = new DTO_Controller();
             person.printData();
         }
     }
