@@ -60,10 +60,10 @@
 	- I use IronXL library to read and write data to an exce file.
 	- I did not know how to connect to the excel file .
 -DTO:
-	-This is the website with the function count all the row of the db:https://stackoverflow.com/questions/20160928/how-to-count-the-number-of-rows-from-sql-table-in-c#:~:text=You%20need%20to%20make%20a,pass%20below%20query%20as%20commandText.&text=Use%20ExecuteScalar%2FExecuteReader%20to%20get%20the%20returned%20count.
-	-I create a DTO blueprint and DTO_Person as a bucket for all the DTOs.
-	-All DTOs is created inside the ReadDataBase and return as an array and pass the return array into DTO_Person object.
-	-I learn how to move a DTO class into a different project and how to access the class from different project with the keyword public.(https://social.msdn.microsoft.com/Forums/en-US/fa3e311e-0bfe-4838-9688-72b3c1dde13f/how-to-call-another-project-from-a-project-in-the-same-solution?forum=Vsexpressvcs).
+	- This is the website with the function count all the row of the db:https://stackoverflow.com/questions/20160928/how-to-count-the-number-of-rows-from-sql-table-in-c#:~:text=You%20need%20to%20make%20a,pass%20below%20query%20as%20commandText.&text=Use%20ExecuteScalar%2FExecuteReader%20to%20get%20the%20returned%20count.
+	- I create a DTO blueprint and DTO_Person as a bucket for all the DTOs.
+	- All DTOs is created inside the ReadDataBase and return as an array and pass the return array into DTO_Person object.
+	- I learn how to move a DTO class into a different project and how to access the class from different project with the keyword public.(https://social.msdn.microsoft.com/Forums/en-US/fa3e311e-0bfe-4838-9688-72b3c1dde13f/how-to-call-another-project-from-a-project-in-the-same-solution?forum=Vsexpressvcs).
 -----------
 	Challenge
    - Follow strictly Object Oriented Program
