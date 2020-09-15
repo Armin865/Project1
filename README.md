@@ -55,11 +55,13 @@
 	- I watched https://www.youtube.com/watch?v=blNb-9vhFLM&t=431s to find the method to insert the data into databse.
 	- I also watched https://www.youtube.com/watch?v=rV6kRpYsJZg&t=553s to find the method to read the data from database.
 	- After finish coding for the sql server compact I have to read about DTO.
--Excel:
+---------
+- Excel:
 	- https://ironsoftware.com/csharp/excel/examples/read-excel/ 
 	- I use IronXL library to read and write data to an exce file.
 	- I did not know how to connect to the excel file .
--DTO:
+------------
+- DTO:
 	-This is the website with the function count all the row of the db:https://stackoverflow.com/questions/20160928/how-to-count-the-number-of-rows-from-sql-table-in-c#:~:text=You%20need%20to%20make%20a,pass%20below%20query%20as%20commandText.&text=Use%20ExecuteScalar%2FExecuteReader%20to%20get%20the%20returned%20count.
 	-I create a DTO blueprint and DTO_Person as a bucket for all the DTOs.
 	-All DTOs is created inside the ReadDataBase and return as an array and pass the return array into DTO_Person object.
