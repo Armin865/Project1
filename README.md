@@ -18,22 +18,25 @@
  - DataIn(): initalize the first row with "First name" and "Last name"
  - void Create(): create a new excel file in the data folder
  - void WriteData(),void WriteData(string,string) andvoid  Writedata(int): have the same functionality to insert new data in the excel file, WriteData only take data 1 time following with user input for first name and last name, WriteData(string,string) can write data without user input, WriteData(int) is used to ask user input multiple times.
- - int getCount(): use to get the number of the current row.
- - string Randomstring(int): generate a random string with require the length for the argument of the string and return the string.
  - void insertRandomString(int,int): write the random string from the Randomstring() to the excel file with 2 argument  which take the first argument for the number of string to insert and second argument to select the length of the string.
  ---------------
  	DataOut Object:
 -  int count: keep track of the current row of the excel.
-- DataOut(int): the constructor which takes 1 argument. The argument is to use to keep track of the current row.
+- DataOut(): Constructor initialize count.
 - void setCount(int): use to set the cursor to the specific row which take 1 argument to set the cursor.
 - void Read():  prints out the whole list in the excel.
 - void Read(int, int): prints out the list with specific range. It take 2 arguments. The first argument is for the range and the second argument is for the root position.
+- int getCount(): return the total valued row number.
+- void setCount(int): Take one argument that set the number of count.
+- Persion[] ReadAndReturnArray(): Retreive data from excel file then return the data in array format.
 ----------
 	SQLSerer Object:
 - string con: Establish the connection string.
 - void InsertDataBase(): Insert the first name and last name into the data base.
 - Person[] ReadDataBase(): Return an array that have all the first name and the last name of the database.
-- int getLength(): Return the number of the all the rows
+- int getLength(): Return the number of the all the rows.
+- string getFirstName(): Ask input then return the input.
+- string getLastName(): Ask input the return the input.
 ----------
 	Person Object:
 - string firstname, lastname: contain first name and last name.
@@ -44,6 +47,7 @@
 - Person[] person: array to contain all Person class.
 - DTO_Person(): Initilize the person array and copy person array with database row.
 - void PrintData(): print the person array with first name and last name.
+- void ExcelDataToDataBase(): Insert data from DTO into database.
 ------------
 	SQL Server Additional Information:
 - https://docs.microsoft.com/en-us/previous-versions/sql/compact/sql-server-compact-4.0/ec4st0e3(v=vs.100)
@@ -66,6 +70,7 @@
 	- I create a DTO blueprint and DTO_Person as a bucket for all the DTOs.
 	- All DTOs is created inside the ReadDataBase and return as an array and pass the return array into DTO_Person object.
 	- I learn how to move a DTO class into a different project and how to access the class from different project with the keyword public.(https://social.msdn.microsoft.com/Forums/en-US/fa3e311e-0bfe-4838-9688-72b3c1dde13f/how-to-call-another-project-from-a-project-in-the-same-solution?forum=Vsexpressvcs).
+	- I can check the data from DTO if it already existed in sql server!(https://stackoverflow.com/questions/20971680/sql-server-insert-if-not-exists).
 -----------
 	Challenge
    - Follow strictly Object Oriented Program
