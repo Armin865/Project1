@@ -95,6 +95,8 @@
 - 1 button to take the text from 2 text input field and insert it into database.
 --------
 	My experience:
+		Website aobut how to display database:https://www.youtube.com/watch?v=C9s0H6yeFLQ.
+		Website about how to insert database:https://www.youtube.com/watch?v=sSBx9_eddmo&t=115s.
 		This is my first windowform app. I found out UI can be easily to implement code similar to ConsoleApp code. I noticed that when you create a form and then you create another form inside the same project it wont show the created form that after the original one. To show the second form you have to call it in the first form.
 
 # New American Business Association
