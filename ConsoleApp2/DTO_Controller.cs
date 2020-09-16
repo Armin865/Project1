@@ -1,4 +1,9 @@
-﻿using System;
+﻿/*
+ * Author: Lam Nguyen
+ * Created Data 09/14/2020
+ * Desciption: DTO controller to control the DTO with data output and input from different source into DTO 
+ */
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;

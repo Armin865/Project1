@@ -1,9 +1,9 @@
 ﻿/*
  * Author: Lam Nguyen
  * Date: 09-09-20202
- * Description: First input output console app
+ * Description: Execute classes
  *          
- *           - Create excel file, insert and read data from .elxs
+ *           
  */
 
 //test

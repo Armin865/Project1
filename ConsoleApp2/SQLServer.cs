@@ -1,4 +1,9 @@
-﻿using System;
+﻿/*
+ * Author: Lam Nguyen
+ * Created Data 09/13/2020
+ * Desciption: Connect to Database and Input and Output the data
+ */
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -11,7 +16,7 @@ using System.Collections;
 namespace ConsoleApp2
 
 { 
-    class SQLServer
+   public class SQLServer
     {   //Establish Connection with the Data Base
         private SqlCeConnection con = new SqlCeConnection(@"Data Source=..\..\App-Data\Person.sdf");
         public string getFirstName()//Get the first name
