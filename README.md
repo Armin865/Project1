@@ -6,7 +6,10 @@
  	  Practice object oriented programming with C#
   	 Practice writing document follow guildline.
  #### Product:
-  	 Five objects : DataIn, DataOut,SQLServer,DTO_Person,Person
+	 Window Forms: ShowDatabaseForm,InputDatabaseForm,Displaydatabase.
+  	 ConsoleApp : DataIn, DataOut,SQLServer,DTO_Person,Person
+-----------
+# ConsoleApp
 ----------------
 #### Functions:
 	      DataIn: int count, DataIn(), Create(),  WriteData(), WriteData(string, string), WriteData(int),  getCount(), Randomstring(int), insertRandomString(int, int).
@@ -79,5 +82,20 @@
    - Learn Sql Server Compact.
    - Learn Microsoft.Data.SqlServerCe class.
    - Create DTO object that contains all the first name and last name.
+----------
+# WindowForm:
+	ShowDatabaseForm form:
+- Show two buttons to show 2 more forms(Displaydatabase form and InputDatabaseForm form)
+--------
+	Displaydatabase form:
+- Has 1 button to open connection and display the database into a grid view.
+--------
+	InputDatabaseForm form:
+- Has 2 text field to input text.
+- 1 button to take the text from 2 text input field and insert it into database.
+--------
+	My experience:
+		This is my first windowform app. I found out UI can be easily to implement code similar to ConsoleApp code. I noticed that when you create a form and then you create another form inside the same project it wont show the created form that after the original one. To show the second form you have to call it in the first form.
+
 # New American Business Association
 
