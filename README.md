@@ -7,7 +7,8 @@
   	 Practice writing document follow guildline.
  #### Product:
 	 Window Forms: ShowDatabaseForm,InputDatabaseForm,Displaydatabase.
-  	 ConsoleApp : DataIn, DataOut,SQLServer,DTO_Person,Person
+  	 ConsoleApp : DataIn, DataOut,SQLServer,DTO_Person,Person.
+	 Installer: installation app.
 -----------
 # ConsoleApp
 ----------------
@@ -52,6 +53,8 @@
 - void PrintData(): print the person array with first name and last name.
 - void ExcelDataToDataBase(): Insert data from DTO into database.
 ------------
+	Installation: 1 installation app for tha package.
+------------
 	SQL Server Additional Information:
 - https://docs.microsoft.com/en-us/previous-versions/sql/compact/sql-server-compact-4.0/ec4st0e3(v=vs.100)
 ----------
@@ -74,6 +77,10 @@
 	- All DTOs is created inside the ReadDataBase and return as an array and pass the return array into DTO_Person object.
 	- I learn how to move a DTO class into a different project and how to access the class from different project with the keyword public.(https://social.msdn.microsoft.com/Forums/en-US/fa3e311e-0bfe-4838-9688-72b3c1dde13f/how-to-call-another-project-from-a-project-in-the-same-solution?forum=Vsexpressvcs).
 	- I can check the data from DTO if it already existed in sql server!(https://stackoverflow.com/questions/20971680/sql-server-insert-if-not-exists).
+-----------
+- Installation App:
+	- I watched a video showing me how to create an installer:https://www.youtube.com/watch?v=fehVTLNQorQ.
+	- I learned how to put output file into a folder that matches with directory in the source code to create connection without errors.
 -----------
 	Challenge
    - Follow strictly Object Oriented Program
