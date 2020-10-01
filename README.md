@@ -101,10 +101,45 @@
 - Has 2 text field to input text.
 - 1 button to take the text from 2 text input field and insert it into database.
 --------
+# APIWindowForm
+	 Display grid: Display the data from the api 
+	 View button: Call the api and push it to the display grid.
+	 Three text fields input to take user input.
+	 Submit button: Submit three text fields to the API post request.
+
+--------
+# DataBaseAzureWindowForm
+	Display grid: display the data from the Azure Sever.
+	View button: Call the api and push it to the display grid.
+	 Three text fields input to take user input.
+	 Submit button: Submit three text fields to the SQL Server Azure.
+--------
+# DTO-WPF
+	public PersonData: public List<Person> GetPerson(),  public void SavePerson(Person person).
+- public List<Person> GetPerson(): Return a list of Person data type from the SQL Server Azure.
+-  public void SavePerson(Person person): Insert a record of Person data type into the SQL Server Azure.
+-------------
+	public SqlDataAccess: public string GetConnectionString(string name), public List<T> LoadData<T, U>(string storedProcedures, U parameters, string connectionStringName),  public void SaveData<T>(string storedProcedures, T parameters, string connectionStringName).
+- public string GetConnectionString(string name): Return the connectionstring.
+-  public List<T> LoadData<T, U>(string storedProcedures, U parameters, string connectionStringName): Retreive the data from the SQL Azure Server Database.
+-  public void SaveData<T>(string storedProcedures, T parameters, string connectionStringName): Insert a data into the SQL Azure Server database.
+-----------
+	public Person :string FirstName, string LastName,string Phone, string FullInfo.
+--------------
+# DTO-WindowForm-API
+	public JsonObject:  public JsonObject(),  public List<Person> Get(),  public HttpResponseMessage Post(string FirstName, string LastName,string Phone).
+- Constructor: Initialize the HttpClient.
+-  public List<Person> Get():  Return a List of Person data type from the API.
+- public HttpResponseMessage Post(string FirstName, string LastName,string Phone): Insert a record through the API and return an Http response message.
+---------
+	public class Person: string firstName,string lastName,string phone.
+---------
 	My experience:
 		Website aobut how to display database:https://www.youtube.com/watch?v=C9s0H6yeFLQ.
 		Website about how to insert database:https://www.youtube.com/watch?v=sSBx9_eddmo&t=115s.
 		This is my first windowform app. I found out UI can be easily to implement code similar to ConsoleApp code. I noticed that when you create a form and then you create another form inside the same project it wont show the created form that after the original one. To show the second form you have to call it in the first form.
+		 I had to watch a lot of video about how to serialize and deserialize data from the api to convert from json to string and the opposite.
+		 I gain more knowledge about web api. We can have multiple way to interact with the api
 
 # New American Business Association
 
